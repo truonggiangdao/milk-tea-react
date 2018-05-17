@@ -1,0 +1,9 @@
+$header-bg-color: #4abdac;
+$header-border-color: rgba(0, 0, 0, .5);
+
+.Header {
+  padding: 20px;
+  text-align: center;
+  background-color: $header-bg-color;
+  border-bottom: 10px solid $header-border-color;
+}

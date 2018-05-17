@@ -1,0 +1,39 @@
+$logo-border-color-white: #fff;
+$logo-border-color-orange: #FC4A1A;
+$logo-border-inner-color: rgba(0, 0, 0, .8);
+$logo-shadow-color: rgba(0, 0, 0, .3);
+
+@mixin box-shadow($pos, $width, $color) {
+  box-shadow: #{$pos} #{$pos} $width $color,
+            #{$pos} #{-$pos} $width $color,
+            #{-$pos} #{$pos} $width $color,
+            #{-$pos} #{-$pos} $width $color;
+}
+
+.Logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 116px;
+  height: 116px;
+  border: 8px solid $logo-border-color-white;
+  border-radius: 50%;
+  @include box-shadow(1px, 2px, $logo-shadow-color);
+
+  .Logo-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid $logo-border-inner-color;
+
+    .Logo-img {
+      min-width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+$banner-text-color: #fff;
+$banner-text-shadow-color: rgba(0, 0, 0, .5);
+$banner-text-size: 70px;
+$banner-text-size-xs: 40px;
+// $font-family: 'Source Sans Pro', sans-serif;
+$font-family: 'Dosis', sans-serif;
+
+.Banner {
+  .Banner-text {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 20px;
+    font-size: $banner-text-size;
+    font-family: $font-family;
+    color: $banner-text-color;
+    text-shadow: 1px 1px 1px $banner-text-shadow-color, -1px -1px 1px $banner-text-shadow-color;
+    font-weight: 600;
+
+    @media screen and (max-width: 767px) {
+      font-size: $banner-text-size-xs;
+    }
+  }
+}
